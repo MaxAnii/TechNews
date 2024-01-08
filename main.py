@@ -34,6 +34,7 @@ def run_flask():
     
 if __name__ == '__main__':
     schedule_tweet() 
+    print("testing log")
     flask_thread = Thread(target=run_flask)
     flask_thread.start()
 
