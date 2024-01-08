@@ -1,6 +1,6 @@
-from flask import Flask
 import schedule
 import time
+from flask import Flask
 from threading import Thread
 from config.tweepy_config import client
 from config.newApi_config import get_news
@@ -25,12 +25,19 @@ def tweet():
                 client.create_tweet(text=tweet_text)
     except:
         print("Error in Tweeting")
-        
-def schedule_tweet():
-    schedule.every(3).minutes.do(tweet)
 
-if __name__ == '__main__':
-    schedule_tweet() 
+@app.route('/') 
+def home():
+    return 'Server is running!'
+
+def schedule_tweet_function(request):
+    schedule.every(3).minutes.do(tweet)
     while True:
         schedule.run_pending()
         time.sleep(1)
+
+
+schedule_tweet_function(None)
+
+if __name__ == '__main__':
+    app.run()
