@@ -27,16 +27,10 @@ def tweet():
         print("Error in Tweeting")
         
 def schedule_tweet():
-    # schedule.every().day.at("17:13").do(tweet)
     schedule.every(3).minutes.do(tweet)
-def run_flask():
-    app.run(debug=True)
-    
+
 if __name__ == '__main__':
     schedule_tweet() 
-    flask_thread = Thread(target=run_flask)
-    flask_thread.start()
-
     while True:
         schedule.run_pending()
         time.sleep(1)
