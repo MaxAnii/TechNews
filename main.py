@@ -1,3 +1,4 @@
+import threading
 import schedule
 import time
 from flask import Flask
@@ -16,7 +17,7 @@ def tweet():
             url = article['url']
             tweet_text = f"{title}\nSource: {source['name']}\nURL: {url}\n@technology @ai"
             if len(tweet_text) > 280:
-                print(f"Skipping tweet: exceeds 250 characters ({len(tweet_text)} characters)")
+                print(f"Skipping tweet: exceeds 280 characters ({len(tweet_text)} characters)")
             else:
                 print(tweet_text)
                 time.sleep(2)
@@ -24,18 +25,17 @@ def tweet():
     except Exception as error:
         print(error)
 
-@app.route('/') 
+def schedule_tweet():
+    schedule.every(3).minutes.do(tweet)
+    while True:
+        schedule.run_pending()
+        time.sleep(1)
+
+@app.route('/')
 def home():
     return 'Server is running!'
 
-def schedule_tweet():
-    schedule.every(3).hours.do(tweet)
-    while True:
-        schedule.run_pending()
-
-
-
-schedule_tweet()
-
 if __name__ == '__main__':
+    thread = threading.Thread(target=schedule_tweet)
+    thread.start()
     app.run()
