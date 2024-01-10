@@ -14,4 +14,5 @@ TechNewsBot is a Python-based Twitter bot designed to automate tweets related to
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 ---
+By [Ansar](https://github.com/MaxAnii) with ❤️.
 Happy tweeting! 🐦✨
