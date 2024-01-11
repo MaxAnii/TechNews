@@ -26,10 +26,10 @@ def tweet():
         print(error)
 
 def schedule_tweet():
-    schedule.every(3).minutes.do(tweet)
+    schedule.every(3).hours.do(tweet)
     while True:
         schedule.run_pending()
-        time.sleep(1)
+        time.sleep(5)
 
 @app.route('/')
 def home():
