@@ -15,7 +15,7 @@ def tweet():
             source = article['source']
             title = article['title']
             url = article['url']
-            tweet_text = f"{title}\nSource: {source['name']}\nURL: {url}\n@technology @ai"
+            tweet_text = f"{title}\nSource: {source['name']}\nURL: {url}\n#technology #ai"
             if len(tweet_text) > 280:
                 print(f"Skipping tweet: exceeds 280 characters ({len(tweet_text)} characters)")
             else:
