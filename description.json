@@ -1,0 +1,9 @@
+{
+	"title": "TechNews",
+	"description": "Stay ahead with automated tweets delivering the freshest tech news right to your feed. From groundbreaking discoveries to industry trends, I've got you covered.Plus, enjoy the convenience of timely updates! TechNews Automate tweets the latest tech news every 4 hours, ensuring you stay in the loop effortlessly.",
+	"banner": "https://projectbanners.s3.eu-north-1.amazonaws.com/Screenshot+2024-08-18+205941.png",
+	"github": "https://github.com/MaxAnii/TechNews",
+	"live": "https://x.com/__TechNews"
+  "projectNumber":4
+  "TechStack" "Python, Tweepy, Newsapi."
+}
