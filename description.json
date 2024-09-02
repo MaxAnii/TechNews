@@ -1,9 +1,9 @@
 {
-	"title": "TechNews",
-	"description": "TechNewsBot is a Python-based Twitter bot designed to automate tweets related to the latest technology news. The bot utilizes the News API to fetch real-time technology news articles and the Tweepy library to automate the tweeting process. This project aims to provide a convenient way to keep followers updated on the latest happenings in the tech world.",
-	"banner": "https://projectbanners.s3.eu-north-1.amazonaws.com/Screenshot+2024-08-27+113110.png",
-	"github": "https://github.com/MaxAnii/TechNews",
-	"live": "https://x.com/__TechNews"
-  "projectNumber":4,
-  "TechStack" "Python, Tweepy, Newsapi."
+"title": "TechNews",
+"description": "TechNewsBot is a Python-based Twitter bot designed to automate tweets related to the latest technology news. The bot utilizes the News API to fetch real-time technology news articles and the Tweepy library to automate the tweeting process. This project aims to provide a convenient way to keep followers updated on the latest happenings in the tech world.",
+"banner": "https://projectbanners.s3.eu-north-1.amazonaws.com/Screenshot+2024-08-27+113110.png",
+"github": "https://github.com/MaxAnii/TechNews",
+"live": "https://x.com/__TechNews"
+"projectNumber":4,
+"techStack": "Python, Tweepy, Newsapi."
 }
